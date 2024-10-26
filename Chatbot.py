@@ -26,13 +26,17 @@ def get_claude_response(question):
         return response.content[0].text
     except Exception as e:
         return f"An error occurred: {str(e)}"
+st.title("🤔 Are you sure about that?")
+
+st.divider()
 
 # Create two columns
 col1, col2 = st.columns(2)
 
+
 # Display in columns with chat-like interface
 with col1:
-    st.title("Question 1")
+    st.header("Question 1")
     # User message with icon
     st.chat_message("user").write(Q1)
     if st.session_state["response1"]:
@@ -40,7 +44,7 @@ with col1:
         st.chat_message("assistant").write(st.session_state["response1"])
 
 with col2:
-    st.title("Question 2")
+    st.header("Question 2")
     # User message with icon
     st.chat_message("user").write(Q2)
     if st.session_state["response2"]:
