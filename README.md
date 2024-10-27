@@ -1,50 +1,135 @@
-# 🎈 Streamlit + LLM Examples App
+<p align="center">
+  <img src="logo.png" alt="Project Logo" width="200"/>
+</p>
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)
+<h1 align="center">Are You Sure About That?</h1>
 
-Starter examples for building LLM apps with Streamlit.
+<p align="center">
+  <strong>A Chain-of-Thought Faithfulness Detection Game</strong>
+</p>
 
-## Overview of the App
+<p align="center">
+  <a href="#demo">View Demo</a> •
+  <a href="#features">Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#deployment">Deployment</a>
+</p>
 
-This app showcases a growing collection of LLM minimum working examples.
+## 🎯 About
 
-Current examples include:
+"Are You Sure About That?" is an interactive web application that challenges users to evaluate the faithfulness of AI model responses to subjective questions. The game presents users with two different model explanations and asks them to identify which demonstrates unfaithful Chain-of-Thought reasoning.
 
-- Chatbot
-- File Q&A
-- Chat with Internet search
-- LangChain Quickstart
-- LangChain PromptTemplate
-- Chat with user feedback
+## ✨ Features
 
-## Demo App
+- Interactive question-answer interface with multiple-choice selection
+- Real-time evaluation using Claude API
+- Side-by-side comparison of model responses
+- Automated scoring and feedback system
+- Comprehensive summary of user performance
+- User feedback collection for response quality
+- Progress tracking across questions
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm-examples.streamlit.app/)
+## 🛠️ Tech Stack
 
-### Get an OpenAI API key
+- **Frontend & API**: Streamlit
+- **AI Model**: Claude 3.5 Sonnet (Anthropic)
+- **Server**: DigitalOcean Droplet
+- **Reverse Proxy**: Nginx
+- **Domain & Security**: Cloudflare
+- **Containerization**: Docker
+- **Version Control**: Git
 
-You can get your own OpenAI API key by following the following instructions:
+## 🚀 Installation
 
-1. Go to https://platform.openai.com/account/api-keys.
-2. Click on the `+ Create new secret key` button.
-3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
-
-### Enter the OpenAI API key in Streamlit Community Cloud
-
-To set the OpenAI API key as an environment variable in Streamlit apps, do the following:
-
-1. At the lower right corner, click on `< Manage app` then click on the vertical "..." followed by clicking on `Settings`.
-2. This brings the **App settings**, next click on the `Secrets` tab and paste the API key into the text box as follows:
-
-```sh
-OPENAI_API_KEY='xxxxxxxxxx'
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/are-you-sure-about-that.git
+cd are-you-sure-about-that
 ```
 
-## Run it locally
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-```sh
-virtualenv .venv
-source .venv/bin/activate
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
-streamlit run Chatbot.py
 ```
+
+4. Set up environment variables:
+```bash
+echo "ANTHROPIC_API_KEY=your_key_here" > .env
+```
+
+5. Run the application:
+```bash
+streamlit run app.py
+```
+
+## 🌐 Deployment
+
+### Docker Deployment
+
+1. Build the Docker image:
+```bash
+docker build -t streamlit-claude .
+```
+
+2. Run the container:
+```bash
+docker run -d \
+  --name streamlit-app \
+  --restart unless-stopped \
+  -p 8501:8501 \
+  --env-file .env \
+  streamlit-claude
+```
+
+### Server Setup
+
+1. Configure Nginx:
+```bash
+sudo vim /etc/nginx/sites-available/streamlit
+```
+
+2. Add the following configuration:
+```nginx
+server {
+    server_name your-domain.com www.your-domain.com;
+
+    location / {
+        proxy_pass http://localhost:8501;
+        proxy_http_version 1.1;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 86400;
+    }
+}
+```
+
+3. Enable the site:
+```bash
+sudo ln -s /etc/nginx/sites-available/streamlit /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+### Domain Setup
+
+1. Configure DNS records in Cloudflare:
+   - Add A record pointing to your DigitalOcean Droplet IP
+   - Add www CNAME record pointing to your domain
+   - Enable SSL/TLS protection
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
