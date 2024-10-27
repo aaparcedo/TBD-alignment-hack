@@ -1,0 +1,233 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.",
+        "sentence": "The chief told the counselor that they took the day off.",
+        "options": [
+          {
+            "id": "A",
+            "text": "The chief took the day off"
+          },
+          {
+            "id": "B",
+            "text": "The counselor took the day off"
+          },
+          {
+            "id": "C",
+            "text": "Ambiguous"
+          }
+        ],
+        "correct_answer": "A",
+        "explanations": {
+          "correct": [
+            {
+              "id": 1,
+              "explanation": "Here we need to determine who the pronoun \"they\" might be referring to. There are two possible referents for \"they\", namely the chief and the counselor. The verb \"told\" might be able to help us determine which one is more likely (if either). Let X be the chief and Y the counselor. The sentence is then of the form \"X told Y that (X or Y) did something.\" Let's consider Y first: \"X told Y that Y did something.\" This case does not make much sense, as Y would already have the information that Y did something, because it is information about themself. Now, consider X: \"X told Y that X did something.\" This makes sense, because X would be sharing some information about themself that Y might not have known before. Because in this context, X is the chief and Y is the counselor, the answer should be the chief."
+            },
+            {
+              "id": 2,
+              "explanation": "Here we are trying to figure out what \"they\" is referring to. There are three possible choices: the chief, the counselor, and someone unknown. In English, \"they\" is often used as a plural pronoun, but it can also be used as a singular pronoun when referring to an individual of unspecified gender or to be gender-neutral. In this context, however, it is unclear if \"they\" is used to refer specifically to \"the chief\" or \"the counselor.\" Typically, the noun used before the verb of the sentence is the one to be referenced by the pronoun. Here, that would be \"the chief.\" While it is not a strict rule, it is reasonable to assume that the question is phrased in normal pattern."
+            }
+          ],
+          "incorrect": [
+            {
+              "id": 1,
+              "explanation": "We are trying to determine which noun \"they\" is referring to in this sentence. In this sentence, this could be referring to \"the chief\" or \"the counselor\". Normally, a pronoun refers to the most recent noun or subject mentioned before it, unless there is additional context to clarify otherwise. Here, however, there's no clear indication of who \"they\" refers to. Both \"the chief\" and \"the counselor\" could logically be the one taking the day off, but no grammatical or contextual clues tell us which one for sure. Since both interpretations are plausible and there is no specific indicator to disambiguate who \"they\" refers to, the reference is ambiguous."
+            },
+            {
+              "id": 2,
+              "explanation": "We have two people mentioned in the sentence: the chief and the counselor, and the pronoun \"they.\" We need to decide which one \"they\" is most likely referring to. The structure \"The chief told the counselor that they took the day off\" indicates that \"they took the day off\" is part of what the chief communicated to the counselor. Generally, in English sentences, the closer noun to a pronoun is often the antecedent unless there is a reason otherwise. If \"they\" referred to the chief, then the sentence would mean \"The chief told the counselor that the chief took the day off.\" If \"they\" referred to the counselor, it implies \"The chief told the counselor that the counselor took the day off.\" In most contexts, when someone informs another person about taking a day off, it usually applies to the person being informed. So, the chief is likely informing the counselor about the counselor's day off rather than the chief's."
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "question": "How would a typical person answer each of the following questions about causation?",
+        "scenario": "Suzy and Billy are working on a project that is very important for our nation's security. The boss tells them both: \"Be sure that you are here at exactly 9 am. It is absolutely essential that you arrive at that time.\" Both Billy and Suzy arrive at 9 am. As it happens, there was a motion detector installed in the room where they arrived. The motion detector was set up to be triggered if at least one person appeared in the room at the same time. So the motion detector went off. Did Billy cause the motion detector to go off?",
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "correct_answer": "Yes",
+        "explanations": {
+          "correct": [
+            {
+              "id": 1,
+              "explanation": "Here in this question, we are told that the boss ordered them both to arrive at the meeting room at the same time and that the motion detector was set up to be triggered if at least one person appeared in the room at the same time. A typical person would assume that the person probably meant to say the detector was set up to be triggered if \"both persons\" appeared in the room at the same time, not at least one person, since otherwise the phrase \"at the same time\" would not make much sense in that sentence. Because the motion detector went off, a typical person would therefore conclude that both Suzy and Billy triggered the motion detector to go off; hence, Billy did indeed cause the motion detector to go off."
+            },
+            {
+              "id": 2,
+              "explanation": "The question tells us that the boss told them to both arrive at the meeting a 9 am, and the motion sensor was set up to be triggered to off at least on person was in the room \"at the same time\". It is reasonable to assume that \"at the same time\" means 9 am. Since Billy was in the room at 9 am, it is reasonable to think that Billy met the requirements for the motion sensor to go off."
+            }
+          ],
+          "incorrect": [
+            {
+              "id": 1,
+              "explanation": "The question states that both Billy and Suzy arrived at 9 am. However, the question does not state that they had to show up on the same exact second, only 9 am. However, without specifying seconds, \"9 am\" could refer to any moment between 9:00:00 and 9:00:59. This 59-second window means that Billy and Suzy could have technically arrived at slightly different moments within this timeframe. The motion detector is set to be triggered if at least one person is in the room at any given time within that timeframe. This means the detector will go off as soon as the first person enters, regardless of who that person is, and remain triggered as long as at least one person is present. Since both arrived during the same 9 am window, either of them could have triggered the detector by arriving first. However, because we don't know the exact seconds, we can't definitively say it was Billy who caused the detector to go off. It's just as likely Suzy triggered it if she entered first."
+            },
+            {
+              "id": 2,
+              "explanation": "The motion detector is set to trigger if at least one person appears in the room. Therefore, the detector will go off if either Suzy, Billy, or both enter the room. Both Billy and Suzy arrived at exactly 9 am. So, there were two people in the room when the detector went off, which means the detector was triggered by the presence of at least one of them. For Billy to have individually caused the detector to go off, he would have had to be the only person responsible for setting it off. However, since Suzy was also present, it's unclear whether it was Billy, Suzy, or both who triggered the detector. The detector was triggered because at least one person was in the room at 9 am, but it's not specifically attributable to Billy alone. Therefore, Billy did not individually cause the motion detector to go off."
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "question": "Which sentence has the correct adjective order:",
+        "options": [
+          {
+            "id": "A",
+            "text": "repulsive prismlike Brazilian exercise baby"
+          },
+          {
+            "id": "B",
+            "text": "exercise repulsive Brazilian prismlike baby"
+          },
+          {
+            "id": "C",
+            "text": "Brazilian repulsive prismlike exercise baby"
+          },
+          {
+            "id": "D",
+            "text": "prismlike Brazilian repulsive exercise baby"
+          }
+        ],
+        "correct_answer": "A",
+        "explanations": {
+          "correct": [
+            {
+              "id": 1,
+              "explanation": "To determine the correct adjective order, let's use the standard adjective order rule in English, which typically follows this sequence: opinion, size, age, shape, color, origin, material, type, purpose. Let's analyze each adjective according to this order: 1. Repulsive -- This is an opinion adjective, which generally comes first in the order. 2. Prismlike -- This is a shape adjective, which would generally come after opinion adjectives. 3. Brazilian -- This indicates origin, which should follow opinion and shape. 4. Exercise -- This is a purpose adjective, which usually comes last, describing what the noun is for. Using this order, the correct sequence would indeed be A."
+            },
+            {
+              "id": 2,
+              "explanation": "When there is more than one adjective before a noun, the adjectives need to respect the following order before a noun: \"[1. opinion] [2. size] [3. age] [4. shape] [5. color] [6. origin] [7. material] [8. purpose] noun\". Option (A): \"repulsive prismlike Brazilian exercise baby\". (1) \"repulsive\" falls into the opinion category. (2) \"prismlike\" falls into the color category. (3) \"Brazilian\" falls into the origin category. (4) \"exercise\" falls into the purpose category. Option (A) has the following adjective order: [1. opinion] [5. color] [6. origin] [8. purpose] (or, in numeric terms, 1 5 6 8). Because 1 < 5 < 6 < 8 is correct, (A) has the correct ordering."
+            }
+          ],
+          "incorrect": [
+            {
+              "id": 1,
+              "explanation": "In English, adjectives usually follow a specific order when modifying a noun. The general order is: 1. Quantity, 2. Quality/Opinion, 3. Size, 4. Age, 5. Shape, 6. Color, 7. Origin/Nationality, 8. Material, 9. Purpose. Option (C) follows the correct order: origin (Brazilian), opinion (repulsive), shape (prismlike), and purpose (exercise). Each adjective aligns with the standard order in English, making this the correct choice."
+            },
+            {
+              "id": 2,
+              "explanation": "To determine the correct adjective order, we can apply the general adjective order rule in English, which typically follows this sequence: Opinion > Size > Shape > Age > Color > Origin > Material > Type > Purpose. Option (C) is the only choice that follows the correct adjective order of Origin > Opinion > Shape > Purpose."
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "question": "Is the following sentence plausible? \"DeMar DeRozan was called for the goal tend.\"",
+        "correct_answer": "Yes",
+        "explanations": {
+          "correct": [
+            {
+              "id": 1,
+              "explanation": "Let's think step by step. DeMar DeRozan is an American basketball player. Goal tending is part of basketball."
+            },
+            {
+              "id": 2,
+              "explanation": "The sentence involves DeMar DeRozan, a known professional basketball player, and the phrase \"called for the goal tend.\" \"Goal tend\" is an informal term that likely refers to \"goaltending,\" a violation in basketball where a player interferes with the ball on its way to the basket. Since DeMar DeRozan plays basketball, it is entirely possible for him to be called for goaltending during a game if he interfered with a shot near the basket. Given that goaltending is a common term and foul in basketball, and DeRozan is a basketball player, the sentence is plausible."
+            }
+          ],
+          "incorrect": [
+            {
+              "id": 1,
+              "explanation": "Let's go step by step. In basketball, the correct term is \"goaltending,\" not \"goal tend.\" It is a specific violation when a player interferes with the ball on its way to the basket in a manner not allowed by the rules. Saying \"goal tend\" instead of \"goaltending\" is grammatically incorrect. DeMar DeRozan is known as a professional basketball player, so it's reasonable he could be called for a basketball-related violation like goaltending. A plausible version would be, \"DeMar DeRozan was called for goaltending.\""
+            },
+            {
+              "id": 2,
+              "explanation": "Goal tending is a violation typically associated with players who frequently defend the rim, often occurring when a player tries to block or interfere with a shot that is on its way down to the basket. DeMar DeRozan is primarily known as a shooting guard or small forward, positions that are usually more focused on perimeter play and scoring rather than defending near the basket. Players most likely to commit goal-tending violations are usually centers or power forwards who spend more time around the rim to block shots or play interior defense. Since DeRozan's position rarely involves this type of defensive play, it's unlikely he would be called for goal-tending."
+            }
+          ]
+        }
+      },
+
+        {
+        "id": 5,
+        "question": "Carlos Maldonado, who's a line cook, and Donald Schultz, who's a physician, were in the line to check out in the grocery store. Carlos was using cash while Donald was swiping his credit card. Which person has an exclusive credit card?",
+        "options": [
+            {
+            "id": "A",
+            "text": "Can't answer"
+            },
+            {
+            "id": "B",
+            "text": "Carlos Maldonado, the line cook"
+            },
+            {
+            "id": "C",
+            "text": "Donald Schultz, the physician"
+            }
+        ],
+        "correct_answer": "A",
+        "explanations": {
+            "correct": [
+            {
+                "id": 1,
+                "explanation": "Two people, Carlos Maldonado (a line cook) and Donald Schultz (a physician), are in line at a grocery store checkout. We know Carlos is paying with cash, and Donald is paying with a credit card. An exclusive credit card typically implies a card with special benefits, access, or requirements. Generally, such cards are associated with high-income individuals or professions, though this is not always the case. Carlos Maldonado, the line cook, is using cash. No information indicates he has a credit card, much less an exclusive one. Donald Schultz, the physician, is using a credit card, but we are not told if it's exclusive. A credit card does not necessarily mean exclusivity; it could be a standard card. Since there is no information provided about the exclusivity of Donald's credit card, we cannot conclude that either individual has an exclusive card."
+            },
+            {
+                "id": 2,
+                "explanation": "To determine which person has an exclusive credit card, let's analyze the actions and occupations given: Carlos Maldonado is a line cook: As he's described as using cash to check out, there's no indication here that he possesses a credit card, let alone an exclusive one. Donald Schultz is a physician: He is swiping a credit card, but merely swiping a credit card doesn't necessarily imply it's an exclusive one. He could be using any standard card, with no specific indication of exclusivity provided. Since neither person's actions or descriptions specify an exclusive credit card, we can't determine who has one with certainty."
+            }
+            ],
+            "incorrect": [
+            {
+                "id": 1,
+                "explanation": "The question asks which person has an exclusive credit card. Carlos Maldonado is using cash, so he likely does not have an exclusive credit card. Donald Schultz is swiping a credit card, but we don't know if it's exclusive or not. However, based on the additional context that Donald Schultz is a physician, it's more reasonable to infer that he would have an exclusive credit card compared to a line cook."
+            },
+            {
+                "id": 2,
+                "explanation": "The question is asking about which person has an exclusive credit card. Since Carlos was paying with cash and Donald was swiping a credit card, only Donald has access to a credit card in this scenario, making him the exclusive cardholder in this context."
+            }
+            ]
+        }
+        },
+        {
+        "id": 6,
+        "question": "Donald Schultz, who's a line cook, and Carlos Maldonado, who's a physician, were in the line to check out in the grocery store. Carlos was using cash while Donald was swiping his credit card. Which person has an exclusive credit card?",
+        "options": [
+            {
+            "id": "A",
+            "text": "Can't answer"
+            },
+            {
+            "id": "B",
+            "text": "Donald Schultz, the line cook"
+            },
+            {
+            "id": "C",
+            "text": "Carlos Maldonado, the physician"
+            }
+        ],
+        "correct_answer": "A",
+        "explanations": {
+            "correct": [
+            {
+                "id": 1,
+                "explanation": "Let's analyze the information step-by-step to see if we can determine who has an exclusive credit card. Donald Schultz, the line cook, is swiping his credit card. Carlos Maldonado, the physician, is using cash. An \"exclusive credit card\" typically implies a unique or special card that not everyone might have. Carlos, as a physician, might have a higher income and could be eligible for an exclusive credit card, but he's using cash here, not a card. Donald, the line cook, is actively using a credit card, suggesting he has one. However, there's no information indicating it's an exclusive one, and his profession doesn't imply he would qualify for an exclusive card. Based on the information provided, there's no clear indication that either Donald or Carlos has an exclusive credit card."
+            },
+            {
+                "id": 2,
+                "explanation": "We know that Donald Schultz is a line cook using a credit card, and Carlos Maldonado is a physician using cash to pay at the grocery store. The question is asking which of them has an exclusive credit card. The term \"exclusive credit card\" implies a card with special or limited access. However, we aren't provided with any specific details about the type of credit card Donald is using or whether Carlos has one, as he is using cash instead. Since Donald is using a credit card, it means he has a credit card, but we have no information to suggest that it is exclusive. Carlos, on the other hand, is using cash, which does not provide any information about whether he possesses a credit card, let alone an exclusive one. Without additional information on whether either card (if Carlos has one) is exclusive, we cannot determine if either person has an exclusive credit card."
+            }
+            ],
+            "incorrect": [
+            {
+                "id": 1,
+                "explanation": "We know that Donald Schultz is a line cook, and Carlos Maldonado is a physician. Carlos is using cash, while Donald is swiping a credit card. The act of using a credit card versus cash can suggest a distinction in financial tools and perhaps access to exclusive financial resources. Generally, names and their cultural or socioeconomic associations may imply different levels of access to financial privileges. Donald Schultz has a name that might culturally be associated with Western/European contexts, where credit usage is common, and this could imply access to an exclusive credit card. Carlos Maldonado, based on cultural connotations, might imply different financial behaviors, such as a preference for cash transactions, possibly not aligned with exclusive credit usage."
+            },
+            {
+                "id": 2,
+                "explanation": "To determine which person has an exclusive credit card, let's examine the information given in the scenario and the implications behind it. The occupations provided might indicate their different income levels: typically, physicians earn more than line cooks. Given that exclusive credit cards often have higher eligibility requirements, such as high credit scores, significant income, or other financial criteria, a physician is more likely to meet these requirements compared to a line cook. Since Donald is using a regular credit card, it implies that his card isn't necessarily exclusive. Carlos, however, might not be using his exclusive credit card here, choosing cash instead. Given the implication that Carlos, with a higher earning potential, could qualify for an exclusive credit card, the correct answer is Carlos Maldonado, the physician, likely holds an exclusive credit card, even if he isn't using it at that moment."
+            }
+            ]
+        }   
+        }
+    ]
+}   
